@@ -1,0 +1,80 @@
+div {
+    height: 100px;
+    width: 100px;
+    /* para centrar bien */
+    line-height: 100px;
+    text-align: center;
+}
+
+/* transformaciones */
+
+.cont1 {
+    background-color: yellowgreen;
+    margin: 10px;
+    transform: translate(100px);
+    /* transform: scale(1.2); */
+}
+
+/* transiciones */
+
+.cont2 {
+    background-color: aqua;
+    margin: 10px;
+    transition: height 1.7s,width 1.7s, background-color 2s;
+    
+}
+
+.cont2:hover {
+    height: 200px;
+    width: 250px;
+    background-color:blueviolet;
+}
+
+/* pseudoclases: active (click y deja presionado), ::placeholder (texto por defecto y es con dos puntos por ser un pseudoelemento, no pseudoclase)*/
+
+/* Animaciones */
+
+.cont3 {
+    background-color: blueviolet;
+    margin: 10px;
+    /* le doy nombre */
+    animation-name: animacion;
+    /* cantidad de veces que se repite */
+    animation-iteration-count: infinite;
+    /* tiempo de desarrollo*/
+    animation-timing-function: ease-in;
+    /* duración */
+    animation-duration: 3s;
+    /* Cuando empieza a reproducirse */
+    animation-delay: 0s;
+    /* bucle */
+    animation-direction: alternate;
+}
+
+/* Le doy las reglas */
+
+@keyframes animacion {
+    /* aplico propiedades y lugares especificos, el keyframes siempre va posterior */
+    50% {
+        width: 200px;
+    }
+
+    100% {
+        width: 400px;
+        height: 400px;
+        background-color:brown;
+    }
+}
+
+/* Fade in y Fade out se hace con opacity */
+
+/* animación con librerias */
+.cont4 {
+    background-color:coral;
+    margin: 10px;
+}
+
+.cont5 {
+    background-color:khaki;
+    margin: 10px;
+}

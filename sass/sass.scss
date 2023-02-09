@@ -1,0 +1,57 @@
+// las variables se declaran en el top del scss
+// Se declaran: $variable: valor (recordar ";" al final de las variables
+// sass permite operadores matemáticos
+
+// condicionales
+// Primero se declara una variable con un valor $animal: gato
+// comienzo a agregar if y else if dentro de algún padre o hijo
+
+$color1: aqua;
+
+
+h1 {
+    color: $color1;
+}
+
+header {
+    width: 100%;
+    height: 120px;
+    background-color: crimson;
+
+    & h2 {
+        color: aliceblue;
+    }
+
+
+    nav {
+        li {
+            color: aliceblue;
+            list-style-type: none;
+
+            &a{
+                text-decoration: none;
+            }
+
+        }
+    }
+    
+
+    
+}
+
+// ejemplo de condicionales
+p {
+    @if $color1 == blue {
+        color: chartreuse;
+    }
+
+    @else if $color1 == red {
+        text-transform: uppercase;
+        text-decoration: dotted;
+    }
+    // si no cumple con nada de lo anterior
+    @else {
+        font-style: italic;
+        color: black;
+    }
+}

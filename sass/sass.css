@@ -1,0 +1,24 @@
+h1 {
+  color: aqua;
+}
+
+header {
+  width: 100%;
+  height: 120px;
+  background-color: crimson;
+}
+header h2 {
+  color: aliceblue;
+}
+header nav li {
+  color: aliceblue;
+  list-style-type: none;
+}
+header nav lia {
+  text-decoration: none;
+}
+
+p {
+  font-style: italic;
+  color: black;
+}/*# sourceMappingURL=sass.css.map */

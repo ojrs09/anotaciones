@@ -1,0 +1,125 @@
+/* ID se usa para secciones y divisiones de código */
+/* Class se usa para especificar diseño */
+/* Relevancia: ID-->Class-->Etiqueta */
+/* La propiedad !important corta la relevancia */
+
+/* Selector universal */
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* list-style-type: Para eliminar bullets y números */
+/* font-style: para cambiar el estilo de letras */
+/* font-weight: para la dureza de letras */
+/* font-size: para el tamaño de letra */
+/* font-family: para cambiar fuente */
+/* text-align: para centrar o alinear */
+/* line-height: para interlineado */
+ul {
+    list-style-type: none;
+    font-style: italic;
+    font-weight:bolder;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    line-height: 30px;
+}
+/* text-decoration: para adornos de las palabras */
+/* background-color: Para color de fondo simple*/
+/* color: para el color del elemento */
+/* text-transform:uppercase pasa a mayusculas */
+a {
+    text-decoration: none;
+    background-color: brown;
+    color: white;
+}
+/* background-image: para imagenes de fondo */
+/* background-repeat: repite la imagen */
+/* background-position: indica donde quiero la imagen */
+/* background-size: puede ser ancho/alto/cover y contain y lo que hace es ajustar la imagen al div */
+p {
+    background-image: url(/Multimedia/descarga.jfif);
+    background-repeat: repeat-x;
+    background-position: right center;
+    background-size: cover;
+}
+
+/* Efecto paralax */
+p {
+    background-image: url(/Multimedia/descarga.jfif);
+    height: 600px;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 50px;
+}
+
+
+/* Unidades de medida: 16px=100% */
+
+/* Para fuestes locales 
+
+@font-face {
+    font-family: "Mistery Quest";
+    src: url(aqui indico directorio raiz de la tipografía descargada);
+}*/
+
+/* Para fuentes web con link en html*/
+p {
+    font-family: "unbounded";
+}
+/* Margin es exterior, padding es interior */
+
+/* DISPLAY */
+
+/* Elementos inline: no empiezan necesariamente en una nueva linea y ocupan solo espacio necesario (marca texto, imagenes y formularios) */
+/* Elementos block: siempre empiezan en una nueva linea y ocupan el 100% del espacio (división de información) */
+/* El mejor es inline-block */
+/* Puedo quitar elementos con Display:none */
+
+/* POSITION : es para ubicar elementos con libertad muy flexible, sirve para menú que te siga con scroll, publicidad o submenu*/
+/* Relative: se mueve respecto al padre y se puede superponer */
+/* Absolute: se superpone */
+/* fixed y sticky: el elemento se mantiene visible aunque se haga scroll */
+/* en fixed, el elemento contenedor es el Viewport */
+/* en sticky baja cuando el scroll lo haga bajar */
+
+/* Para poner menú en lista */
+ul {
+    position: fixed;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+}
+
+/* Ocultar sub menú */
+
+ul ul li {
+    display: block;
+    /* para poner elementos uno debajo del otro */
+}
+
+ul ul {
+    position: absolute;
+    display: none;
+    /* para trabajar en conjunto con position relative y ocultar hasta que no llegue el hover */
+}
+
+ul li:hover ul {
+    display: block;
+    /* despliegue uno debajo del otro */
+}
+
+/* Propiedad float alinea a derecha o izquierda */
+
+/* Gradientes: background-image:linear-gracient (color 1, color 2) */
+
+
+
+

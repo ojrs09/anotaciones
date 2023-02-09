@@ -1,0 +1,50 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* Aqui inicio: convierto toda la fila en columnas */
+.padre-flex {
+    display: flex;
+    /* valor predeterminado */
+    flex-direction: row;
+    /* aplicar de derecha a izquierda */
+    flex-direction: row-reverse;
+    /* convertir a fila de nuevo */
+    flex-direction: column;
+    /* igual que el anterior, tiene inverso */
+    flex-direction: column-reverse;
+    /* Decidir si hace salto de linea si no hay espacio (ideal para responsive)*/
+    /* Acepta wrap, no-wrap y wrap-reverse */
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* justify-content nos ayudará a alinear elementos */
+    /* flex-start es el predeterminado */
+    justify-content:flex-start;
+    justify-content: flex-end;
+    justify-content: center;
+    /* espaciado entre elementos */
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    /* Alinear elementos */
+    align-items:stretch;
+    align-items: flex-start;
+    /* Para dejar todos en una linea sin importar las dimensiones */
+    align-items: baseline;
+    /* Para el contenido */
+    /* Para align content necesito tener un flex wrap */
+    /* Predeterminada y tiene las mismas opciones que align-items */
+    align-content: stretch;
+}
+
+/* Propiedades para los hijos, es decir, el contenido del flex */
+.item {
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    color: black;
+    /* Modificar orden */
+    order: -1;
+}

@@ -1,0 +1,86 @@
+.grid {
+    display: grid;
+    /* hago dos columnas y dos filas */
+    grid-template-columns: 300px 100px;
+    grid-template-rows: 40px 100px;
+}
+
+.item1 {
+        background-color: blueviolet;
+}
+
+.item2 {
+    background-color: aqua;
+}
+
+.item3 {
+    background-color: blue;
+}
+
+.item4 {
+    background-color: brown;
+}
+
+/* Crear grids más concretamente por áreas */
+/* Aqui defino las finas, columnas y áreas que previamente declaramos en html */
+/* Con la palabra none también puedo indicar que el espacio estará vacío */
+#grilla {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    grid-template-areas: 
+        "nav header header"
+        "nav productos publicidad"
+        "nav servicios publicidad"
+        "nav footer footer";
+    grid-template-rows: 100px 1fr 1fr 75px;
+    grid-template-columns: 20% auto 15%;
+    height: 100vh;
+    margin: 0;
+}
+
+.border {
+    border: 1px solid black;
+    background-color: yellow;
+}
+
+/* Asigno grid area a cada sección */
+
+header {
+    grid-area: header;
+}
+
+footer {
+    grid-area: footer;
+}
+
+section#productos {
+    grid-area: productos;
+}
+
+nav {
+    grid-area: nav;
+}
+
+aside {
+    grid-area: publicidad;
+}
+
+/* Posiciones del hijo desde el padre */
+
+/* puedo usar justify-items para distribuir horizontal y align-items para distribuir vertical, esto alineará el contenido de las celdas*/
+/* de la misma manera puedo usar justify-content para horizontal y align-content para vertical, esto alineara TODO el contenido del div*/
+
+/* Para cambiar comportamiento de items especificos, se le aplica directo al elemento hijo */
+
+/* justify-self: altera justificación en el eje horizontal (stech cubre todo el grid area que ocupa)*/
+/* align-self: altera justificación en el eje vertical */
+/* grid-area: indica área que ocupa en el grid */
+
+/* Breakpoints se media queries */
+
+/*Teléfonos vertical 320px  */
+/* Teléfonos horizontal 480px */
+/* Tablets pequeñas 600px */
+/* Tablets medianas: 768px, 1023px y 1024px */
+/* Escritorio 1200px */
